@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://brdl1b4x1wlnp"]
+
+[ext_resource type="Script" uid="uid://8lugrbm2ky4w" path="res://Player.cs" id="1_mi4c6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ugbq"]
+size = Vector2(376, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi4c6"]
+size = Vector2(20, 667)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ugbq"]
+
+[node name="MainRoom" type="Node2D" unique_id=152727971]
+
+[node name="Ceiling" type="Area2D" parent="." unique_id=147489923]
+position = Vector2(1, 0)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling" unique_id=2036318298]
+position = Vector2(187, -10)
+shape = SubResource("RectangleShape2D_1ugbq")
+
+[node name="Floor" type="Area2D" parent="." unique_id=513095424]
+position = Vector2(0, 687)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1929546845]
+position = Vector2(187, -10)
+shape = SubResource("RectangleShape2D_1ugbq")
+
+[node name="LeftSide" type="Area2D" parent="." unique_id=727934382]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftSide" unique_id=2065414918]
+position = Vector2(-11, 333.5)
+shape = SubResource("RectangleShape2D_mi4c6")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=607367620]
+position = Vector2(123, 228)
+script = ExtResource("1_mi4c6")
+JumpVelocity = -600.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=885527972]
+shape = SubResource("CircleShape2D_1ugbq")
+
+[node name="Polygon2D" type="Polygon2D" parent="CharacterBody2D" unique_id=1253129928]
+polygon = PackedVector2Array(0, -10, 6, -8, 9, -4, 10, 2, 8, 6, 3, 10, -4, 9, -8, 6, -10, 0, -7, -8)
