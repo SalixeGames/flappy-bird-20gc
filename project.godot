@@ -15,6 +15,10 @@ run/main_scene="res://main_room.tscn"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+LevelInfos="*uid://digdapifhi6lm"
+
 [display]
 
 window/size/viewport_width=375
@@ -26,7 +30,7 @@ project/assembly_name="Flappy Bird 20gc"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/rider-plugin/plugin.cfg")
+enabled=PackedStringArray()
 
 [layer_names]
 

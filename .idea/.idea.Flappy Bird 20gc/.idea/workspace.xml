@@ -6,6 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="652a6ce2-8c34-4a25-90f8-d6e9f704d798" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Flappy Bird 20gc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Flappy Bird 20gc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pipes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/LICENCE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/bin/linux/librider-gdextension.linux.editor.arm64.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/bin/linux/librider-gdextension.linux.editor.x86_64.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/bin/macos/librider-gdextension.macos.editor.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/bin/rider-plugin.gdextension" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/bin/rider-plugin.gdextension.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/bin/windows/rider-gdextension.windows.editor.x86_64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/bin/windows/~rider-gdextension.windows.editor.x86_64.dll~RFd9c6e48.TMP" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/icons/icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/icons/icon.svg.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/plugin.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/presets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/rider-plugin.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/rider-plugin.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/screenshots/Toolbar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/screenshots/Toolbar.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/scripts/editor_settings_util.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/scripts/editor_settings_util.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/scripts/json_utils.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/scripts/json_utils.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/scripts/locator/rider_locator_service.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/scripts/locator/rider_locator_service.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/scripts/presets/preset_applier.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/rider-plugin/scripts/presets/preset_applier.gd.uid" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main_room.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/main_room.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
@@ -105,6 +132,7 @@
       <workItem from="1781970168060" duration="798000" />
       <workItem from="1781971050222" duration="447000" />
       <workItem from="1781971756786" duration="1331000" />
+      <workItem from="1781983105313" duration="2575000" />
     </task>
     <servers />
   </component>
