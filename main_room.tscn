@@ -7,7 +7,7 @@
 size = Vector2(375, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi4c6"]
-size = Vector2(20, 667)
+size = Vector2(20, 1334)
 
 [node name="MainRoom" type="Node2D" unique_id=152727971]
 
@@ -38,7 +38,11 @@ shape = SubResource("RectangleShape2D_mi4c6")
 position = Vector2(123, 228)
 
 [node name="Pipes" parent="." unique_id=1532470668 instance=ExtResource("2_77bs5")]
+position = Vector2(264, 333)
+DistanceFromBorder = 100.0
 
 [node name="Pipes2" parent="." unique_id=647994280 instance=ExtResource("2_77bs5")]
+position = Vector2(375, 333)
 
 [node name="Pipes3" parent="." unique_id=2136766565 instance=ExtResource("2_77bs5")]
+position = Vector2(375, 331)

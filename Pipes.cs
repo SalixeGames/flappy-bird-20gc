@@ -20,7 +20,7 @@ public partial class Pipes : Node2D
 	{
 		LevelInfos.Instance.PipesList.Add(this);
 		_id = LevelInfos.Instance.PipesList.Count - 1;
-		SetPosition(new Vector2(_id * 200, _get_new_height()));
+		SetPosition(new Vector2((_id * 200) + DisplayServer.WindowGetSize().X, _get_new_height()));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -49,21 +49,25 @@ public partial class Pipes : Node2D
 
 		float finalPositionY = (distanceDirection * distance) + prevPipe.Position.Y;
 		
-		GD.Print(_id + " -> Avant: " + (finalPositionY).ToString());
+		GD.Print(_id + ": " + (finalPositionY - DistanceFromBorder));
+		GD.Print(_id + ": " + (finalPositionY + DistanceFromBorder));
 		
-		if ((finalPositionY + (DisplayServer.WindowGetSize().Y / 2) - 73.5) + DistanceFromBorder < 0)
+		if (finalPositionY - DistanceFromBorder < 0)
 		{
 			distanceDirection = 1;
 			finalPositionY = (distanceDirection * distance) + prevPipe.Position.Y;
 		}
-		else if (finalPositionY + (DisplayServer.WindowGetSize().Y - ((DisplayServer.WindowGetSize().Y / 2) - 73.5)) - DistanceFromBorder > DisplayServer.WindowGetSize().Y)
+		else if (finalPositionY + DistanceFromBorder > DisplayServer.WindowGetSize().Y)
 		{
 			distanceDirection = -1;
 			finalPositionY = (distanceDirection * distance) + prevPipe.Position.Y;
 		}
-		
-		GD.Print(_id + " -> Apres: " + (finalPositionY).ToString());
 
 		return finalPositionY;
+	}
+
+	public void OnLeftCollide(Area2D area)
+	{
+		SetPosition(new Vector2(200 + DisplayServer.WindowGetSize().X, _get_new_height()));
 	}
 }

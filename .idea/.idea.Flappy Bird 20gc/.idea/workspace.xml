@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="652a6ce2-8c34-4a25-90f8-d6e9f704d798" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Flappy Bird 20gc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Flappy Bird 20gc/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LevelInfos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LevelInfos.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pipes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pipes.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_room.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/main_room.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pipes.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/pipes.tscn" afterDir="false" />
@@ -111,7 +110,7 @@
       <workItem from="1781970168060" duration="798000" />
       <workItem from="1781971050222" duration="447000" />
       <workItem from="1781971756786" duration="1331000" />
-      <workItem from="1781983105313" duration="8515000" />
+      <workItem from="1781983105313" duration="10684000" />
     </task>
     <servers />
   </component>
