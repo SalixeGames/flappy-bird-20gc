@@ -24,12 +24,17 @@ window/size/viewport_height=667
 
 project/assembly_name="Flappy Bird 20gc"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/rider-plugin/plugin.cfg")
+
 [layer_names]
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Floor"
 2d_physics/layer_3="Ceiling"
 2d_physics/layer_4="Left"
+2d_physics/layer_5="Pipe"
 
 [physics]
 
@@ -38,3 +43,4 @@ project/assembly_name="Flappy Bird 20gc"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"

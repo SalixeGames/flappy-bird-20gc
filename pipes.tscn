@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://drwogefx4jj17"]
+
+[ext_resource type="Script" uid="uid://rk3v65ljpgjq" path="res://Pipes.cs" id="1_r1kwc"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_mi4c6"]
+size = Vector2(50, 500)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77bs5"]
+size = Vector2(50, 500)
+
+[node name="Pipes" type="Node2D" unique_id=1532470668]
+script = ExtResource("1_r1kwc")
+_speed = -200.0
+
+[node name="UpperPart" type="MeshInstance2D" parent="." unique_id=1971296335]
+position = Vector2(338, 10)
+mesh = SubResource("QuadMesh_mi4c6")
+
+[node name="Area2D" type="Area2D" parent="UpperPart" unique_id=336895920]
+collision_layer = 16
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperPart/Area2D" unique_id=872406339]
+shape = SubResource("RectangleShape2D_77bs5")
+
+[node name="LowerPart" type="MeshInstance2D" parent="." unique_id=876280894]
+position = Vector2(338, 656)
+mesh = SubResource("QuadMesh_mi4c6")
+
+[node name="Area2D" type="Area2D" parent="LowerPart" unique_id=1145153852]
+collision_layer = 16
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerPart/Area2D" unique_id=1455012123]
+shape = SubResource("RectangleShape2D_77bs5")

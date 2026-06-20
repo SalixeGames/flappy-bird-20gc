@@ -1,22 +1,13 @@
 [gd_scene format=3 uid="uid://brdl1b4x1wlnp"]
 
-[ext_resource type="Script" uid="uid://8lugrbm2ky4w" path="res://Player.cs" id="1_mi4c6"]
+[ext_resource type="PackedScene" uid="uid://c7gxsbcdsvur0" path="res://player.tscn" id="1_mi4c6"]
+[ext_resource type="PackedScene" uid="uid://drwogefx4jj17" path="res://pipes.tscn" id="2_77bs5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ugbq"]
-size = Vector2(376, 20)
+size = Vector2(375, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi4c6"]
 size = Vector2(20, 667)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_1ugbq"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_mi4c6"]
-radius = 10.0
-height = 20.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_77bs5"]
-radius = 1.0
-height = 2.0
 
 [node name="MainRoom" type="Node2D" unique_id=152727971]
 
@@ -40,25 +31,16 @@ shape = SubResource("RectangleShape2D_1ugbq")
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftSide" unique_id=2065414918]
-position = Vector2(-11, 333.5)
+position = Vector2(-85, 333)
 shape = SubResource("RectangleShape2D_mi4c6")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=607367620]
+[node name="Player" parent="." unique_id=1867743024 instance=ExtResource("1_mi4c6")]
 position = Vector2(123, 228)
-scale = Vector2(2, 2)
-script = ExtResource("1_mi4c6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=885527972]
-shape = SubResource("CircleShape2D_1ugbq")
+[node name="Pipes" parent="." unique_id=1532470668 instance=ExtResource("2_77bs5")]
 
-[node name="Polygon2D" type="Polygon2D" parent="CharacterBody2D" unique_id=640894217]
-color = Color(0.94393235, 0.22803769, 0, 1)
-polygon = PackedVector2Array(8, -1, 14, 0, 8, 1)
+[node name="Pipes2" parent="." unique_id=647994280 instance=ExtResource("2_77bs5")]
+position = Vector2(200, -100)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D" unique_id=1275415759]
-mesh = SubResource("SphereMesh_mi4c6")
-
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="CharacterBody2D" unique_id=1966969028]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(3, -4)
-mesh = SubResource("SphereMesh_77bs5")
+[node name="Pipes3" parent="." unique_id=2136766565 instance=ExtResource("2_77bs5")]
+position = Vector2(400, 100)
