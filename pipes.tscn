@@ -11,6 +11,7 @@ size = Vector2(50, 500)
 [node name="Pipes" type="Node2D" unique_id=1532470668]
 script = ExtResource("1_r1kwc")
 _speed = -200.0
+MaxSpacing = 200.0
 
 [node name="UpperPart" type="MeshInstance2D" parent="." unique_id=1971296335]
 position = Vector2(338, 10)

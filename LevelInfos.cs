@@ -12,6 +12,7 @@ public partial class LevelInfos : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		GD.Randomize(); 
 		Instance = this;
 		PipesList = new Array<Pipes>();
 	}

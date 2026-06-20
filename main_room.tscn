@@ -38,10 +38,7 @@ shape = SubResource("RectangleShape2D_mi4c6")
 position = Vector2(123, 228)
 
 [node name="Pipes" parent="." unique_id=1532470668 instance=ExtResource("2_77bs5")]
-position = Vector2(-380, 68)
 
 [node name="Pipes2" parent="." unique_id=647994280 instance=ExtResource("2_77bs5")]
-position = Vector2(-251, -18)
 
 [node name="Pipes3" parent="." unique_id=2136766565 instance=ExtResource("2_77bs5")]
-position = Vector2(-247, 200)
