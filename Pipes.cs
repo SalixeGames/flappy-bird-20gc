@@ -20,7 +20,7 @@ public partial class Pipes : Node2D
 	{
 		LevelInfos.Instance.PipesList.Add(this);
 		_id = LevelInfos.Instance.PipesList.Count - 1;
-		SetPosition(new Vector2((_id * 200) + DisplayServer.WindowGetSize().X, _get_new_height()));
+		SetPosition(new Vector2((_id * 200) + 375, _get_new_height()));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -57,7 +57,7 @@ public partial class Pipes : Node2D
 			distanceDirection = 1;
 			finalPositionY = (distanceDirection * distance) + prevPipe.Position.Y;
 		}
-		else if (finalPositionY + DistanceFromBorder > DisplayServer.WindowGetSize().Y)
+		else if (finalPositionY + DistanceFromBorder > 667)
 		{
 			distanceDirection = -1;
 			finalPositionY = (distanceDirection * distance) + prevPipe.Position.Y;
@@ -68,6 +68,6 @@ public partial class Pipes : Node2D
 
 	public void OnLeftCollide(Area2D area)
 	{
-		SetPosition(new Vector2(200 + DisplayServer.WindowGetSize().X, _get_new_height()));
+		SetPosition(new Vector2(200 + 375, _get_new_height()));
 	}
 }
