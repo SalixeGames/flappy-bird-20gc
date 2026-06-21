@@ -12,11 +12,14 @@ size = Vector2(50, 500)
 
 [sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_og227"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1kwc"]
+size = Vector2(5, 150)
+
 [node name="Pipes" type="Node2D" unique_id=1532470668]
 script = ExtResource("1_r1kwc")
 _speed = -200.0
 MaxSpacing = 200.0
-DistanceFromBorder = 200.0
+DistanceFromBorder = 100.0
 
 [node name="UpperPart" type="MeshInstance2D" parent="." unique_id=1971296335]
 position = Vector2(0, -325)
@@ -51,5 +54,11 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(-0.5, 100)
 scale = Vector2(49, 2.5)
 mesh = SubResource("RibbonTrailMesh_og227")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2117764792]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=846691089]
+shape = SubResource("RectangleShape2D_r1kwc")
 
 [connection signal="area_entered" from="LowerPart/Area2D" to="." method="OnLeftCollide"]

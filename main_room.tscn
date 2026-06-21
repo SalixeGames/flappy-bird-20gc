@@ -12,34 +12,31 @@ size = Vector2(20, 1334)
 [node name="MainRoom" type="Node2D" unique_id=152727971]
 
 [node name="Ceiling" type="Area2D" parent="." unique_id=147489923]
-position = Vector2(1, 0)
+position = Vector2(187, -10)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling" unique_id=2036318298]
-position = Vector2(187, -10)
 shape = SubResource("RectangleShape2D_1ugbq")
 
 [node name="Floor" type="Area2D" parent="." unique_id=513095424]
-position = Vector2(0, 687)
+position = Vector2(187, 677)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1929546845]
-position = Vector2(187, -10)
 shape = SubResource("RectangleShape2D_1ugbq")
 
 [node name="LeftSide" type="Area2D" parent="." unique_id=727934382]
+position = Vector2(-60, 333)
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftSide" unique_id=2065414918]
-position = Vector2(-85, 333)
 shape = SubResource("RectangleShape2D_mi4c6")
 
 [node name="Player" parent="." unique_id=1867743024 instance=ExtResource("1_mi4c6")]
 position = Vector2(123, 228)
 
 [node name="Pipes" parent="." unique_id=1532470668 instance=ExtResource("2_77bs5")]
-position = Vector2(264, 333)
-DistanceFromBorder = 100.0
+position = Vector2(380, 333)
 
 [node name="Pipes2" parent="." unique_id=647994280 instance=ExtResource("2_77bs5")]
 position = Vector2(375, 333)

@@ -15,7 +15,7 @@ public partial class Player : CharacterBody2D
 		velocity += GetGravity() * (float)delta;
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("ui_accept"))
+		if (Input.IsActionJustPressed("Jump"))
 		{
 			velocity.Y = JumpVelocity;
 		}
@@ -26,13 +26,27 @@ public partial class Player : CharacterBody2D
 
 	public override void _Process(double delta)
 	{
-		float CapedVelocity = Velocity.Y;
+		float capedVelocity = Velocity.Y;
 		if (Velocity.Y > Math.Abs(JumpVelocity))
 		{
-			CapedVelocity = Math.Abs(JumpVelocity);
+			capedVelocity = Math.Abs(JumpVelocity);
 		}
 
-		float RotationAngle = -(CapedVelocity / JumpVelocity) * 80;
-		SetRotationDegrees(RotationAngle);
+		float rotationAngle = -(capedVelocity / JumpVelocity) * 80;
+		SetRotationDegrees(rotationAngle);
+	}
+
+	public void OnAreaEntered(Area2D area)
+	{
+		if (area.GetCollisionLayerValue(6))
+		{
+			// Give point
+			LevelInfos.Instance.Score += 1;
+			GD.Print(LevelInfos.Instance.Score);
+		}
+		else
+		{
+			GetTree().Paused = true;
+		}
 	}
 }

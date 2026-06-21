@@ -12,6 +12,8 @@ height = 20.0
 radius = 1.0
 height = 2.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1867743024]
 collision_mask = 22
 script = ExtResource("1_4flbx")
@@ -31,3 +33,11 @@ mesh = SubResource("SphereMesh_mi4c6")
 modulate = Color(0, 0, 0, 1)
 position = Vector2(3, -4)
 mesh = SubResource("SphereMesh_77bs5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1289547446]
+collision_mask = 54
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=260531378]
+shape = SubResource("CircleShape2D_4flbx")
+
+[connection signal="area_entered" from="Area2D" to="." method="OnAreaEntered"]
