@@ -7,6 +7,19 @@ public partial class Player : CharacterBody2D
 	[Export]
 	public float JumpVelocity = -600.0f;
 
+	[Export] 
+	public Label Points;
+
+	public override void _Ready()
+	{
+		Points.Text = $"{LevelInfos.Instance.Score}";
+	}
+
+	// public override void _EnterTree()
+	// {
+	// 	Points.Text = $"{LevelInfos.Instance.Score}";
+	// }
+
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
@@ -42,7 +55,7 @@ public partial class Player : CharacterBody2D
 		{
 			// Give point
 			LevelInfos.Instance.Score += 1;
-			GD.Print(LevelInfos.Instance.Score);
+			Points.Text = $"{LevelInfos.Instance.Score}";
 		}
 		else
 		{
