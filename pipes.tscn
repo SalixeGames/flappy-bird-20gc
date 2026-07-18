@@ -1,19 +1,24 @@
-[gd_scene format=3 uid="uid://drwogefx4jj17"]
+[gd_scene format=4 uid="uid://drwogefx4jj17"]
 
 [ext_resource type="Script" uid="uid://rk3v65ljpgjq" path="res://Pipes.cs" id="1_r1kwc"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_mi4c6"]
-size = Vector2(50, 500)
+[ext_resource type="Texture2D" uid="uid://dwm4lgk08ceyw" path="res://BoutDeTuyau.png" id="2_og227"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77bs5"]
 size = Vector2(50, 500)
 
-[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_r1kwc"]
-
-[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_og227"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1kwc"]
 size = Vector2(5, 150)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l4tgv"]
+texture = ExtResource("2_og227")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_nq3k0"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_l4tgv")
 
 [node name="Pipes" type="Node2D" unique_id=1532470668]
 script = ExtResource("1_r1kwc")
@@ -21,39 +26,23 @@ _speed = -200.0
 MaxSpacing = 200.0
 DistanceFromBorder = 100.0
 
-[node name="UpperPart" type="MeshInstance2D" parent="." unique_id=1971296335]
-position = Vector2(0, -325)
-mesh = SubResource("QuadMesh_mi4c6")
-
-[node name="Area2D" type="Area2D" parent="UpperPart" unique_id=336895920]
+[node name="Area2D3" type="Area2D" parent="." unique_id=336895920]
+position = Vector2(2.3841858e-07, -319.5)
+scale = Vector2(0.96000004, 1.0220001)
 collision_layer = 16
 collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperPart/Area2D" unique_id=872406339]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=872406339]
 shape = SubResource("RectangleShape2D_77bs5")
 
-[node name="LowerPart" type="MeshInstance2D" parent="." unique_id=876280894]
-position = Vector2(0, 325)
-mesh = SubResource("QuadMesh_mi4c6")
-
-[node name="Area2D" type="Area2D" parent="LowerPart" unique_id=1145153852]
+[node name="Area2D2" type="Area2D" parent="." unique_id=1145153852]
+position = Vector2(1.3113022e-06, 319.5)
+scale = Vector2(0.96, 1.022)
 collision_layer = 16
 collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerPart/Area2D" unique_id=1455012123]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1455012123]
 shape = SubResource("RectangleShape2D_77bs5")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1598031107]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(0, -100)
-scale = Vector2(50.000004, 1.5)
-mesh = SubResource("RibbonTrailMesh_r1kwc")
-
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=862722936]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(-0.5, 100)
-scale = Vector2(49, 2.5)
-mesh = SubResource("RibbonTrailMesh_og227")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2117764792]
 collision_layer = 32
@@ -61,4 +50,9 @@ collision_layer = 32
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=846691089]
 shape = SubResource("RectangleShape2D_r1kwc")
 
-[connection signal="area_entered" from="LowerPart/Area2D" to="." method="OnLeftCollide"]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1593644541]
+position = Vector2(32, 0)
+tile_map_data = PackedByteArray("AAD//wMAAAABAAAAAAD///3/AAABAAAAAAD///z/AAABAAAAAAD///v/AAABAAAAAAD///r/AAABAAAAAAD///n/AAABAAAAAAD///j/AAABAAAAAAD///f/AAABAAAAAAD///b/AAABAAAAAAD///X/AAABAAAAAAD///T/AAABAAAAAAD///P/AAABAAAAAAD///L/AAABAAAAAAD///H/AAABAAAAAAD///D/AAABAAAAAAD//+//AAABAAAAAAD//+7/AAABAAAAAAD//+3/AAABAAAAAAD//wQAAAABAAAAAAD//wUAAAABAAAAAAD//wYAAAABAAAAAAD//wcAAAABAAAAAAD//wgAAAABAAAAAAD//wkAAAABAAAAAAD//woAAAABAAAAAAD//wsAAAABAAAAAAD//wwAAAABAAAAAAD//w0AAAABAAAAAAD//w4AAAABAAAAAAD//w8AAAABAAAAAAD//xAAAAABAAAAAAD//xEAAAABAAAAAAD//xIAAAABAAAAAAD//wEAAAAAAAAAAAD///7/AAAAAAEAAAD//wIAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_nq3k0")
+
+[connection signal="area_entered" from="Area2D2" to="." method="OnLeftCollide"]
