@@ -7,8 +7,7 @@
     <list default="true" id="652a6ce2-8c34-4a25-90f8-d6e9f704d798" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Flappy Bird 20gc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Flappy Bird 20gc/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_room.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/main_room.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/player.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +112,7 @@
       <workItem from="1781983105313" duration="11071000" />
       <workItem from="1782008997266" duration="3529000" />
       <workItem from="1782318610603" duration="910000" />
+      <workItem from="1784418018157" duration="715000" />
     </task>
     <servers />
   </component>

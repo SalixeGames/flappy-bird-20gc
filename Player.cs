@@ -9,6 +9,17 @@ public partial class Player : CharacterBody2D
 
 	[Export] 
 	public Label Points;
+	
+	[Export]
+	public AudioStreamPlayer AudioPlayer;
+	
+	[ExportCategory("SoundBits")]
+	[Export]
+	public AudioStream PointSound;
+	[Export]
+	public AudioStream JumpSound;
+	[Export]
+	public AudioStream DeathSound;
 
 	public override void _Ready()
 	{
@@ -56,6 +67,9 @@ public partial class Player : CharacterBody2D
 			// Give point
 			LevelInfos.Instance.Score += 1;
 			Points.Text = $"{LevelInfos.Instance.Score}";
+			
+			AudioPlayer.Stream = PointSound;
+			AudioPlayer.Play();
 		}
 		else
 		{
