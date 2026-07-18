@@ -1,18 +1,13 @@
 [gd_scene format=3 uid="uid://c7gxsbcdsvur0"]
 
 [ext_resource type="Script" uid="uid://8lugrbm2ky4w" path="res://Player.cs" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://o7yt88wek366" path="res://Bird.png" id="2_onrkg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ugbq"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_mi4c6"]
-radius = 10.0
-height = 20.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_77bs5"]
-radius = 1.0
-height = 2.0
+radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
+radius = 8.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1867743024]
 collision_mask = 22
@@ -22,22 +17,15 @@ JumpVelocity = -450.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=688364959]
 shape = SubResource("CircleShape2D_1ugbq")
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1013226365]
-color = Color(0.94393235, 0.22803769, 0, 1)
-polygon = PackedVector2Array(8, -1, 14, 0, 8, 1)
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=153577452]
-mesh = SubResource("SphereMesh_mi4c6")
-
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=1131281338]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(3, -4)
-mesh = SubResource("SphereMesh_77bs5")
-
 [node name="Area2D" type="Area2D" parent="." unique_id=1289547446]
 collision_mask = 54
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=260531378]
 shape = SubResource("CircleShape2D_4flbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=539646958]
+texture_filter = 1
+position = Vector2(-1, 1)
+texture = ExtResource("2_onrkg")
 
 [connection signal="area_entered" from="Area2D" to="." method="OnAreaEntered"]
