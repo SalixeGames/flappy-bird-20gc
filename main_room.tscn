@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c7gxsbcdsvur0" path="res://player.tscn" id="1_mi4c6"]
 [ext_resource type="PackedScene" uid="uid://drwogefx4jj17" path="res://pipes.tscn" id="2_77bs5"]
+[ext_resource type="AudioStream" uid="uid://c1878pa66ym1x" path="res://music.ogg" id="3_the2v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ugbq"]
 size = Vector2(375, 20)
@@ -72,3 +73,9 @@ text = "51"
 label_settings = SubResource("LabelSettings_77bs5")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=986523873]
+stream = ExtResource("3_the2v")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true

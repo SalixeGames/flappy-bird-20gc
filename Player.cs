@@ -42,6 +42,9 @@ public partial class Player : CharacterBody2D
 		if (Input.IsActionJustPressed("Jump"))
 		{
 			velocity.Y = JumpVelocity;
+			
+			AudioPlayer.Stream = JumpSound;
+			AudioPlayer.Play();
 		}
 
 		Velocity = velocity;
@@ -74,6 +77,9 @@ public partial class Player : CharacterBody2D
 		else
 		{
 			GetTree().Paused = true;
+			
+			AudioPlayer.Stream = DeathSound;
+			AudioPlayer.Play();
 		}
 	}
 }

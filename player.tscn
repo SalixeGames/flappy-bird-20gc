@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://8lugrbm2ky4w" path="res://Player.cs" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://o7yt88wek366" path="res://Bird.png" id="2_onrkg"]
 [ext_resource type="AudioStream" uid="uid://ggr0ytd26e1w" path="res://PointSound.wav" id="3_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://bih4ujflxa4wd" path="res://FlightSound.wav" id="3_sweqy"]
+[ext_resource type="AudioStream" uid="uid://sdshonxr8anr" path="res://DeathSound.wav" id="4_2hs0m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ugbq"]
 radius = 8.0
@@ -16,6 +18,8 @@ script = ExtResource("1_4flbx")
 JumpVelocity = -450.0
 AudioPlayer = NodePath("AudioStreamPlayer")
 PointSound = ExtResource("3_i3pqv")
+JumpSound = ExtResource("3_sweqy")
+DeathSound = ExtResource("4_2hs0m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=688364959]
 shape = SubResource("CircleShape2D_1ugbq")
