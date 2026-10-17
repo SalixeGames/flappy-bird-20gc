@@ -16,6 +16,12 @@ size = Vector2(20, 1334)
 font_size = 64
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="Sky" id="Sky_ss6w1"]
+
+[sub_resource type="Environment" id="Environment_t3c8w"]
+sky = SubResource("Sky_ss6w1")
+ambient_light_color = Color(0.22148708, 0.6560485, 0.94644624, 1)
+
 [node name="MainRoom" type="Node2D" unique_id=152727971]
 
 [node name="Ceiling" type="Area2D" parent="." unique_id=147489923]
@@ -141,3 +147,6 @@ ignore_camera_scroll = true
 position = Vector2(191.00002, 473)
 scale = Vector2(1.5, 1.526)
 texture = ExtResource("4_a7ayd")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1365515800]
+environment = SubResource("Environment_t3c8w")

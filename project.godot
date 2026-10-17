@@ -15,6 +15,10 @@ run/main_scene="res://main_room.tscn"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://c3p7hifbsj733"
+
 [autoload]
 
 LevelInfos="*uid://digdapifhi6lm"
@@ -69,3 +73,4 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.25705612, 0.529686, 0.7166562, 1)
