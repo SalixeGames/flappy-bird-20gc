@@ -9,9 +9,12 @@ public partial class LevelInfos : Node
 	public int Score { get; set; }
 	public Array<Pipes> PipesList { get; set; }
 	
+	public Dictionary<String, String> LeaderBoard { get; set; }
+	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		LoadGame();
 		GD.Print("Level Info ready");
 		ProcessMode = ProcessModeEnum.Always;
 		GD.Randomize(); 
@@ -34,5 +37,29 @@ public partial class LevelInfos : Node
 			GetTree().ReloadCurrentScene();
 			_initial_config();
 		}
+	}
+
+	public void LoadGame()
+	{
+		using var file = FileAccess.Open("./leaderboard", FileAccess.ModeFlags.Read);
+		if (file != null)
+		{
+			Variant dataVariant = file.GetVar(true);
+			LeaderBoard = dataVariant.As<Dictionary<string, string>>();
+			file.Close();
+		}
+		else
+		{
+			LeaderBoard = new Dictionary<string, string>();
+		}
+		GD.Print(LeaderBoard);
+	}
+
+	public void SaveGame()
+	{
+		using var file = FileAccess.Open("./leaderboard", FileAccess.ModeFlags.Write);
+		
+		file.StoreVar(LeaderBoard);
+		file.Close();
 	}
 }

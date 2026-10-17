@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Runtime.InteropServices.JavaScript;
 
 public partial class Player : CharacterBody2D
 {
@@ -76,10 +77,14 @@ public partial class Player : CharacterBody2D
 		}
 		else
 		{
+			// Die
+			LevelInfos.Instance.LeaderBoard.Add(DateTime.Now.ToString(), LevelInfos.Instance.Score.ToString());
+			LevelInfos.Instance.SaveGame();
 			GetTree().Paused = true;
 			
 			AudioPlayer.Stream = DeathSound;
 			AudioPlayer.Play();
+			
 		}
 	}
 }
