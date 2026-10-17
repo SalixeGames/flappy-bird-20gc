@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://c7gxsbcdsvur0" path="res://player.tscn" id="1_mi4c6"]
 [ext_resource type="PackedScene" uid="uid://drwogefx4jj17" path="res://pipes.tscn" id="2_77bs5"]
 [ext_resource type="AudioStream" uid="uid://c1878pa66ym1x" path="res://music.ogg" id="3_the2v"]
+[ext_resource type="Texture2D" uid="uid://bquxdx0g5otsq" path="res://Mountain.png" id="4_a7ayd"]
+[ext_resource type="Texture2D" uid="uid://0n5skrkg8d4y" path="res://Cloud.png" id="4_ss6w1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ugbq"]
 size = Vector2(375, 20)
@@ -76,6 +78,66 @@ vertical_alignment = 1
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=986523873]
 stream = ExtResource("3_the2v")
-volume_db = -10.0
 autoplay = true
+bus = &"Music"
 parameters/looping = true
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1816180334]
+modulate = Color(0.61339027, 0.61339027, 0.61339027, 1)
+z_index = -3
+repeat_size = Vector2(448, 192)
+autoscroll = Vector2(-50, 0)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D2" unique_id=546786445]
+position = Vector2(0, 170)
+texture = ExtResource("4_ss6w1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=77808335]
+position = Vector2(86, 91)
+texture = ExtResource("4_ss6w1")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D2" unique_id=1630771524]
+position = Vector2(161, 183)
+texture = ExtResource("4_ss6w1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Parallax2D2" unique_id=1154649553]
+position = Vector2(299, 106)
+texture = ExtResource("4_ss6w1")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=2095813668]
+z_index = -1
+repeat_size = Vector2(576, 0)
+autoscroll = Vector2(-150, 0)
+repeat_times = 2
+
+[node name="Sprite2D5" type="Sprite2D" parent="Parallax2D3" unique_id=1321339539]
+position = Vector2(346, 608)
+texture = ExtResource("4_ss6w1")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D3" unique_id=181999682]
+position = Vector2(34, 537)
+texture = ExtResource("4_ss6w1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=420142121]
+position = Vector2(61, 197)
+texture = ExtResource("4_ss6w1")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D3" unique_id=1944924154]
+position = Vector2(256, 357)
+texture = ExtResource("4_ss6w1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Parallax2D3" unique_id=1321525899]
+position = Vector2(376, 80)
+texture = ExtResource("4_ss6w1")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1801184059]
+z_index = -2
+repeat_size = Vector2(320, 0)
+autoscroll = Vector2(-100, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1727944364]
+position = Vector2(191.00002, 473)
+scale = Vector2(1.5, 1.526)
+texture = ExtResource("4_a7ayd")

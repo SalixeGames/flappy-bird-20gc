@@ -37,5 +37,6 @@ texture = ExtResource("2_onrkg")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1111458670]
 stream = ExtResource("3_i3pqv")
+bus = &"sfx"
 
 [connection signal="area_entered" from="Area2D" to="." method="OnAreaEntered"]
