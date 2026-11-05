@@ -20,7 +20,7 @@ public partial class Pipes : Node2D
 	{
 		LevelInfos.Instance.PipesList.Add(this);
 		_id = LevelInfos.Instance.PipesList.Count - 1;
-		GD.Print("Pipes " + _id + " ready");
+		
 		SetPosition(new Vector2((_id * 200) + 375, _get_new_height()));
 	}
 

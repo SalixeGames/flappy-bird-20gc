@@ -78,6 +78,7 @@ public partial class Player : CharacterBody2D
 		else
 		{
 			// Die
+			EmitSignalDeath();
 			LevelInfos.Instance.LeaderBoard.Add(DateTime.Now.ToString(), LevelInfos.Instance.Score.ToString());
 			LevelInfos.Instance.SaveGame();
 			GetTree().Paused = true;
@@ -87,4 +88,7 @@ public partial class Player : CharacterBody2D
 			
 		}
 	}
+
+	[Signal] 
+	public delegate void DeathEventHandler();
 }

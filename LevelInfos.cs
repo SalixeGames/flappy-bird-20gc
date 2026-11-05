@@ -15,7 +15,7 @@ public partial class LevelInfos : Node
 	public override void _Ready()
 	{
 		LoadGame();
-		GD.Print("Level Info ready");
+		
 		ProcessMode = ProcessModeEnum.Always;
 		GD.Randomize(); 
 		Instance = this;
@@ -33,9 +33,7 @@ public partial class LevelInfos : Node
 	{
 		if (Input.IsActionJustPressed("Restart"))
 		{
-			GetTree().Paused = false;
-			GetTree().ReloadCurrentScene();
-			_initial_config();
+			Restart();
 		}
 	}
 
@@ -52,7 +50,6 @@ public partial class LevelInfos : Node
 		{
 			LeaderBoard = new Dictionary<string, string>();
 		}
-		GD.Print(LeaderBoard);
 	}
 
 	public void SaveGame()
@@ -61,5 +58,26 @@ public partial class LevelInfos : Node
 		
 		file.StoreVar(LeaderBoard);
 		file.Close();
+	}
+	
+	public void Restart()
+	{
+		GetTree().Paused = false;
+		GetTree().ReloadCurrentScene();
+		_initial_config();
+	}
+
+	public int GetBestScore()
+	{
+		int bestScore = 0;
+		foreach (var (date, score) in LeaderBoard)
+		{
+			if (score.ToInt() > bestScore)
+			{
+				bestScore = score.ToInt();
+			}
+		}
+		
+		return bestScore;
 	}
 }
